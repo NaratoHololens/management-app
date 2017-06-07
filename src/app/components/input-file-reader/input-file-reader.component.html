@@ -1,0 +1,5 @@
+<input #fileInput type="file" (change)="changeListener($event)" />
+<button md-raised-button type="submit" value="Browse..." (click)="selectFIle()">
+    {{buttonText}} <span class="mat-placeholder-required" *ngIf="required">*</span>
+    <span id="checkIcon" class="material-icons" *ngIf="photoSelected">check_circle</span>
+</button>

@@ -1,0 +1,5 @@
+<div id="controlPanel">
+  <button md-raised-button *ngIf="!pictureTaken" (click)="takePicture()">take picture</button>
+  <button md-raised-button *ngIf="pictureTaken" (click)="takePicture()">new picture</button>
+  <button md-raised-button (click)="saveUser()">save user</button>
+</div>

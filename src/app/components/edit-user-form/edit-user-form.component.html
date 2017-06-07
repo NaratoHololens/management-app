@@ -1,0 +1,54 @@
+<div id="inputArea">
+  <md-input-container class="user-input-field">
+    <input mdInput placeholder="First name"
+           [(ngModel)]="currentUser.firstname"
+           [disabled]="!editable"
+           required />
+  </md-input-container>
+  <md-input-container class="user-input-field">
+    <input mdInput placeholder="Last name"
+           [(ngModel)]="currentUser.lastname"
+           [disabled]="!editable"
+           required />
+  </md-input-container>
+  <md-input-container class="user-input-field">
+    <input mdInput placeholder="Occupation"
+           [(ngModel)]="currentUser.professionalOccupation"
+           [disabled]="!editable"
+           required />
+  </md-input-container>
+  <input-file-reader [buttonText]="photoTitle"
+                     [required]="photoRequired"
+                     (complete)="setPhoto($event)"
+                     *ngIf="showFileButton&&editable">
+  </input-file-reader>
+  <md-input-container class="user-input-field" *ngIf="false">
+    <input mdInput placeholder="Photo"
+           [(ngModel)]="currentUser.photoString"
+           disabled="disabled"
+           required />
+  </md-input-container>
+  <md-input-container class="user-input-field">
+    <input mdInput placeholder="Twittername"
+           [(ngModel)]="currentUser.twittername"
+           [disabled]="!editable" />
+  </md-input-container>
+  <div id="dateDiv" class="wrapperDiv">
+    <label class="mat-input-placeholder mat-float">Birthday
+      <span class="mat-placeholder-required">*</span>
+    </label>
+    <br />
+    <p-calendar [(ngModel)]="formDate" dateFormat="dd/mm/yy"
+                [inline]="true"
+                [maxDate]="currentdate"
+                [monthNavigator]="true"
+                [yearNavigator]="true"
+                yearRange="1920:2020"
+                [disabled]="!editable"
+    >
+    </p-calendar>
+  </div>
+  <button md-raised-button type="submit"
+          (click)="saveUser()"
+          *ngIf="showSaveButton&&editable">Save user</button>
+</div>

@@ -1,0 +1,14 @@
+<h2>{{actionHeader}}</h2>
+<camera-component   #cameraComponent
+                    [showButtons]="false"
+                    (photoSelected)="setPhoto($event)"></camera-component>
+<div id="formField">
+    <edit-user-form #userForm
+                    [currentUser]="currentUser"
+                    [photoRequired]="registerMode"
+                    [showFileButton]="false"
+                    [showSaveButton]="false"
+                    (userSavedEvent)="saveUser($event)"></edit-user-form>
+</div>
+<control-panel  (photoTaken)="sendPhotoTrigger($event)"
+                (userSavePressed)="sendSaveUserTriger($event)"></control-panel>

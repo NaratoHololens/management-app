@@ -1,0 +1,18 @@
+<md-list>
+  <md-list-item class="link" (click)="goAddUser()">
+    <md-icon md-list-icon>add</md-icon>
+    <h4 md-line >Create new user</h4>
+  </md-list-item>
+  <md-divider></md-divider>
+  <span *ngFor="let user of currentUsers">
+    <md-divider></md-divider>
+    <md-list-item class="listItem">
+      <md-icon md-list-icon id="folder">folder</md-icon>
+      <h4 md-line class="link" (click)="goUserDetail(user)">{{user?.firstname}} {{user?.lastname}}</h4>
+      <p md-line> {{user?.professionalOccupation}} | {{user?.birthday | date: 'dd/MM/yyyy'}}</p>
+      <div class="material-icons link actionIcons" id="editIcon" (click)="goModifyUser(user)">mode_edit</div>
+      <div class="material-icons link actionIcons" (click)="deleteUser(user)">delete</div>
+      <div class="material-icons link actionIcons" id="editIconStat"(click)="goUserStatistics(user)">assessment</div>
+    </md-list-item>
+  </span>
+</md-list>

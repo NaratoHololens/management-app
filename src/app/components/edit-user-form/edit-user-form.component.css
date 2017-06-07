@@ -1,0 +1,34 @@
+button{
+    display: block;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+input{
+    border: none;
+}
+p-calendar{
+    /*width: 50%;*/
+}
+.user-form {
+    width: 500px;
+}
+.user-input-field {
+    width: 48%;
+    margin: 5px;
+}
+.wrapperDiv{
+    position: relative;
+    left: 5%;
+    /*position: absolute;
+    right:0;
+    display: block;*/
+}
+#inputArea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: space-around;
+}

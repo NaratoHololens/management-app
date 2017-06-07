@@ -1,0 +1,22 @@
+<div  class="container" >
+
+  <md-toolbar id="toolbarHeader">
+    Hololens Management
+    <span class="app-toolbar-filler"></span>
+    <button md-button *ngIf="authContext.isAuthenticated()" (click)="authContext.logOut()" class="loginBtn">logout</button>
+    <button md-button *ngIf="!authContext.isAuthenticated()" (click)="authContext.logIn()" class="loginBtn">Login</button>
+  </md-toolbar>
+
+
+<div class="content">
+  <router-outlet></router-outlet>
+  <ng-component></ng-component>
+</div>
+<div class="spacer"></div>
+
+<footer>
+  <md-toolbar id="toolbarFooter">
+      <img src="http://narato.be/wp-content/uploads/2016/06/Narato-full-logo-vector-outline.svg" alt="Narato" height="40px"/>
+  </md-toolbar>
+</footer>
+</div>

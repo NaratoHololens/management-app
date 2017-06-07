@@ -1,0 +1,31 @@
+.actionIcons{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    margin: 2%;
+    color: #0D3349;
+}
+.link{
+    cursor: pointer;
+}
+.listItem{
+    position: relative;
+}
+.parrentDiv{
+    position: relative;
+    width: 100px;
+    height: 18px;
+}
+#editIcon{
+    right: 30px;
+
+}
+#editIconStat
+{
+  right: 60px
+}
+
+#folder
+{
+  color: #0D3349;
+}

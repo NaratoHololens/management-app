@@ -1,0 +1,6 @@
+<h2>Modify user</h2>
+<div id="formField">
+  <edit-user-form [currentUser]="existingUser"
+                  [photoRequired]="false"
+                  (userSavedEvent)="saveUser($event)"></edit-user-form>
+</div>

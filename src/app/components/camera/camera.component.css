@@ -1,0 +1,11 @@
+#controlArea{
+    position: absolute;
+    margin: 20px;
+    top: 44%;
+    right: 12%;
+}
+#photoArea{
+    margin-left: 20px;
+    margin-right: 10px;
+    float: left;
+}

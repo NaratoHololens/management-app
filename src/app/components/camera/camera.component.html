@@ -1,0 +1,10 @@
+<div id="controlArea" *ngIf="showButtons">
+    <button md-raised-button *ngIf="!hideVideoEle" (click)="takePicture()">take picture</button>
+    <button md-raised-button *ngIf="hideVideoEle" (click)="newPicture()">new picture</button>
+</div>
+<div id="photoArea">
+    <video #video [hidden]="hideVideoEle" width="576" height="432" autoplay></video>
+    <canvas #photoCanvas [hidden]="!hideVideoEle" ></canvas>
+</div>
+<div class="output">
+</div>
